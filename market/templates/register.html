@@ -4,9 +4,13 @@
 Register Page
 {% endblock%}
 {% block content %}
+<body class="text-center w-100 p-3">
 <div class="container">
-    <form method='POST' class="form-register" style='color:white'>
-
+   <form method='POST' class="form-register" style='color:white'>
+    <img class='mb-4' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPFxA_Zt8kK3ReFRA5VTtcSRorOHdVY8HqIg&usqp=CAU' />
+    <h1 class="h3 mb-3 font-weight-normal">
+    Please Create Your Account
+    </h1>
     {{ form.username.label() }}
     {{ form.username(class="form-control", placeholder='Username') }}
 
@@ -18,7 +22,11 @@ Register Page
 
     {{ form.password2.label() }}
     {{ form.password2(class="form-control", placeholder='confirm password') }}
+<br>
+    {{ form.submit(class='btn btn-lg btn-block btn-primary')}}
+
 </form>
 </div>
+</body>
 
 {% endblock%}
