@@ -11,6 +11,7 @@ wtforms = "*"
 length = "*"
 validator = "*"
 email-validator = "*"
+flask-bcrypt = "*"
 
 [dev-packages]
 
