@@ -10,8 +10,15 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(length=30))
     email_address = db.Column(db.String(length=50))
     password_hash = db.Column(db.String(length=60),nullable=False)
-    Budget = db.Column(db.Integer(), nullable=False,default=1000)
+    budget = db.Column(db.Integer(), nullable=False,default=1000)
     items = db.relationship('Item',backref='owned_user')
+    
+    @property
+    def prettier_budget(self):
+        if len(str(self.budget)) >= 4:
+            return f'{str(self.budget)[:-3]},{str(self.budget)[-3:]}Ksh'
+        else:
+            return f'{self.budget}Ksh'
     
     @property
     def password(self):
