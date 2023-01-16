@@ -6,7 +6,7 @@ Market Page
 
 <div class="row" style="margin-top:20px; margin-left:20px">
    <div class="col-sm-8">
-      <h2 style="color:#da9100">Available Items On the Market</h2>
+      <h2 style="color:#da9100">Items Available On the Market</h2>
       <p>Click on the item to start buying <i class="fas fa-smile"></i></p>
       <br>
       <table class="table table-hover table-dark">
@@ -34,7 +34,7 @@ Market Page
                   MoreInfo
                   </button>
                   ||
-                  <button class="btn btn-outline btn-success">
+                  <button class="btn btn-outline btn-success" data-toggle="modal" data-target="#Modal-PurchaseConfirm-{{item.id}}">
                   PurchaseItem
                   </button>
                </td>
