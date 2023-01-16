@@ -45,10 +45,13 @@
         <h4 class="text-center">
         Are you sure you want to buy {{item.name}} for {{ item.price }}Ksh ?
         </h4>
+        <br>
         <h6 class="text-center">
             click on purchase to purchase the item.
         </h6>
-        {{ purchase_form.submit()}}
+        <br>
+        <input id="purchased_item" name="purchased_item" type="hidden" value={{item.name}}>
+        {{ purchase_form.submit(class="btn btn-outline-success btn-block")}}
       </form>
       </div>
       <div class="modal-footer">
